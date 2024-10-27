@@ -20,7 +20,7 @@ Stay informed with live updates on weather conditions and potential hazards in y
 ---
 
 **Evacuation Plans**  
-Find routes and shelters for safe evacuation, with real-time directions and tips for smooth transitions.  
+Find routes and shelters for safe evacuation, with Apple Maps integration and tips for smooth transitions.  
 <img src="https://github.com/user-attachments/assets/98aad03e-4549-4db2-aaa5-ff7c286ec5b1" width="300">
 
 ---
@@ -29,3 +29,11 @@ Find routes and shelters for safe evacuation, with real-time directions and tips
 - **Real-Time Alerts**: Always stay a step ahead with accurate, live disaster alerts.
 - **Preparedness Tips**: Get essential tips and resources to prepare before disaster strikes.
 - **Evacuation Routes & Shelters**: Safe navigation to the nearest shelters with a focus on efficiency and safety.
+
+
+
+# Built for the 2024 Congressional App Challenge, using SwiftUI
+
+- Zain. 
+
+
