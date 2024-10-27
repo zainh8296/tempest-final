@@ -34,6 +34,6 @@ Find routes and shelters for safe evacuation, with Apple Maps integration and ti
 
  Built for the 2024 Congressional App Challenge, using SwiftUI.
 
--- Zain. 
+-- Zain, Freshman @ Jericho High School. 
 
 
