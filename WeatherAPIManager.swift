@@ -24,7 +24,7 @@ class WeatherAPIManager: ObservableObject {
     @Published var alerts: [WeatherAlert] = []
     @Published var errorMessage: String?
     
-    private let apiKey = "b87709ddbae249ba87a230626242210" // Replace with your WeatherAPI key
+    private let apiKey = "API-KEY" 
     
     func fetchWeather(latitude: Double, longitude: Double) {
         let urlString = "https://api.weatherapi.com/v1/current.json?key=\(apiKey)&q=\(latitude),\(longitude)"
