@@ -99,19 +99,7 @@ struct SwiftUIView: View {
                                 }
                                 .padding(.top)
                                 
-                                if !weatherViewModel.alerts.isEmpty {
-                                    if let alert = weatherViewModel.alerts.first {  // Assuming we're using the first alert for simplicity
-                                        Text(evacuationMessage(for: alert.severity)) // Dynamic evacuation message
-                                        
-                                        
-                                    }
-                                } else {
-                                    if let alert = weatherViewModel.alerts.first {  // Assuming we're using the first alert for simplicity
-                                        Text(evacuationMessage(for: alert.severity)) // Dynamic evacuation message
-                                        
-                                        
-                                    }
-                                }
+                                
                                 
                                 // Debugging: Show what the current alert array looks like
                                 
@@ -163,11 +151,13 @@ struct SwiftUIView: View {
                     
                     // Countdown Timer GroupBox
                     GroupBox(label: Text("Alert Information:")) {
-                        WeatherDescriptionView()                        }
+                        WeatherDescriptionView()
+                    }
                     .padding(.horizontal)
                     Spacer()
                 }
             }
+            .navigationBarHidden(true) // This hides the navigation bar
         }
 
         .sheet(isPresented: $showingAddItemSheet) {
@@ -175,6 +165,7 @@ struct SwiftUIView: View {
             
         }
     }
+    
     struct AddItemView: View {
         @Binding var checklist: [SwiftUIView.ChecklistItem]
         @Binding var isPresented: Bool
@@ -202,26 +193,10 @@ struct SwiftUIView: View {
         }
     }
     
-    
-    
-    // Function to determine evacuation message based on severity
-    private func evacuationMessage(for severity: String) -> String {
-        switch severity.uppercased() {
-        case "Extreme":
-            return "It is *critically* recommended to take immediate action and evacuate!"
-        case "Severe":
-            return "It is *strongly* recommended to take action and evacuate."
-        case "Moderate":
-            return "It is advised to stay cautious and be ready to evacuate if needed."
-        case "Minor":
-            return "Monitor the situation closely, but evacuation is not required at this time."
-        default:
-            return "No evacuation necessary. Stay informed."
-        }
-    }
 }
-    
-    #Preview {
+
+struct SwiftUIView_Previews: PreviewProvider {
+    static var previews: some View {
         SwiftUIView()
     }
-
+}
